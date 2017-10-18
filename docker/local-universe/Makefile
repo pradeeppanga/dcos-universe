@@ -33,6 +33,8 @@ gen-universe: clean
 		--repository $(REPO_BASE_DIR)/repo/packages/ \
 		--include "$(DCOS_PACKAGE_INCLUDE)" \
 		--dcos_version "$(DCOS_VERSION) \
+		--nonlocal_images \
+		--nonlocal_cli \
 		--server_url http://local-universe.marathon.mesos:8085
 else
 gen-universe: clean
